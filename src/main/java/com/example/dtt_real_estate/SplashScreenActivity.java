@@ -40,7 +40,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     }
     // method that takes you from the splashScreen activity to the main activity
     private void switchActivity(){
-        Intent switchActivityIntent = new Intent(this, MainActivity.class);
+        Intent switchActivityIntent = new Intent(this, OverviewActivity.class);
         startActivity(switchActivityIntent);
         finish();
 

@@ -63,4 +63,55 @@
         app:layout_constraintVertical_bias="0.979"
         app:srcCompat="@drawable/ic_home" />
 
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="275dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="1dp"
+        android:text="DTT REAL ESTATE"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <TextView
+        android:id="@+id/tv_searchbar"
+        android:layout_width="274dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/rounded_corner"
+        android:text="   Search for a home"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <ImageView
+        android:id="@+id/iv_search_icon"
+        android:layout_width="44dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/searchbar_background"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109"
+        app:srcCompat="@drawable/ic_search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="200dp"
+        android:layout_height="273dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.227" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
 
         splashScreen = findViewById(R.id.iv_splash_screen);
-        // add an onclicklistener to handle the click event when user clicks on splash screen
+        // add an onClicklistener to handle the click event when user clicks on splash screen
         splashScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

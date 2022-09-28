@@ -1,6 +1,6 @@
 <resources>
-
-    <style name="Widget.Theme.DTTRealEstate.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+    <!-- base application theme -->
+    <style name="Widget.Theme.DTTRealEstate.ActionBar.Fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@color/black_overlay</item>
     </style>
 

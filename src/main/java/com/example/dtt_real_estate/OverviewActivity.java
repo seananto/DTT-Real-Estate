@@ -1,8 +1,12 @@
 package com.example.dtt_real_estate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +23,13 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class OverviewActivity extends AppCompatActivity {
+
+    // declaration of variables
     TextView helloWorld;
+    ImageView toolbar;
+    ImageView homeButton;
+    ImageView infoButton;
+
     String API_KEY = "98bww4ezuzfePCYFxJEWyszbUXc7dxRx";
 
     @Override
@@ -27,7 +37,21 @@ public class OverviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_overview);
 
+        // views
         helloWorld = findViewById(R.id.tv_hello_world);
+        toolbar = findViewById(R.id.iv_toolbar);
+        //homeButton = findViewById(R.id.iv_home_button);
+        infoButton = findViewById(R.id.iv_info_button);
+
+        // place onClickListener to handle click event on buttons
+        infoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // call method that handles the switching of activities
+                SwitchToAboutPageActivity();
+            }
+        });
+
 
         // instantiate the RequestQueue
         RequestQueue requestQueue = Volley.newRequestQueue(this);
@@ -54,8 +78,11 @@ public class OverviewActivity extends AppCompatActivity {
         // add the request to the RequestQueue
         requestQueue.add(request);
 
-
-
-
+    }
+    // method that handles the switching of activities
+    private void SwitchToAboutPageActivity(){
+        Intent switchActivityIntent = new Intent(this, AboutPageActivity.class);
+        startActivity(switchActivityIntent);
+        finish();
     }
 }
